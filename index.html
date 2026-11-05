@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plan your next unforgettable trip with Roamly." />
+  <title>Roamly — Your next adventure starts here</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Roamly home"><span class="brand-mark">✳</span> roamly<span class="brand-dot">.</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#discover">Discover</a><a href="#planner">Trip planner</a><a href="#inspiration">Inspiration</a>
+    </nav>
+    <a class="header-cta" href="#planner">Plan a trip <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> FIND YOUR SOMEWHERE</p>
+        <h1>The world is waiting.<br><em>Go find your way.</em></h1>
+        <p class="hero-copy">Thoughtful trips, unforgettable places, and a little more wonder in every day.</p>
+        <a class="hero-link" href="#planner">Start exploring <span>↓</span></a>
+      </div>
+      <div class="hero-note"><span class="note-line"></span><span>MAKE ROOM FOR<br>THE UNEXPECTED</span></div>
+      <div class="hero-count"><strong>01</strong><span> / 04</span></div>
+    </section>
+
+    <section class="planner-section" id="planner">
+      <div class="section-heading">
+        <div><p class="eyebrow dark-eyebrow">YOUR JOURNEY, YOUR WAY</p><h2>Where to <em>next?</em></h2></div>
+        <p>Tell us what you have in mind.<br>We'll help shape the details.</p>
+      </div>
+
+      <form class="planner-card" id="tripForm">
+        <div class="field destination-field">
+          <label for="destination">I WANT TO EXPLORE</label>
+          <div class="input-wrap"><span class="field-icon">⌖</span>
+            <input id="destination" name="destination" list="destinations" placeholder="Choose a destination" required />
+            <datalist id="destinations">
+              <option value="Bali, Indonesia"><option value="Kyoto, Japan"><option value="Paris, France">
+              <option value="Swiss Alps, Switzerland"><option value="Goa, India"><option value="Jaipur, India">
+              <option value="Kerala, India"><option value="New York, USA"><option value="Rome, Italy">
+            </datalist>
+          </div>
+        </div>
+        <div class="field">
+          <label for="startDate">CHECK IN</label>
+          <div class="input-wrap"><span class="field-icon">▦</span><input type="date" id="startDate" required /></div>
+        </div>
+        <div class="field">
+          <label for="endDate">CHECK OUT</label>
+          <div class="input-wrap"><span class="field-icon">▦</span><input type="date" id="endDate" required /></div>
+        </div>
+        <div class="field">
+          <label for="travelers">TRAVELERS</label>
+          <div class="input-wrap"><span class="field-icon">♙</span>
+            <select id="travelers"><option value="1">1 traveler</option><option value="2" selected>2 travelers</option><option value="3">3 travelers</option><option value="4">4 travelers</option><option value="5">5 travelers</option><option value="6">6+ travelers</option></select>
+          </div>
+        </div>
+        <button class="plan-button" type="submit">Build my trip <span>↗</span></button>
+      </form>
+
+      <div class="itinerary-area" id="itineraryArea" hidden>
+        <div class="itinerary-top">
+          <div><p class="eyebrow dark-eyebrow">MADE FOR YOUR ADVENTURE</p><h3 id="itineraryTitle">Your itinerary</h3><p class="itinerary-meta" id="itineraryMeta"></p></div>
+          <button class="text-button" id="printButton" type="button">Print itinerary ↗</button>
+        </div>
+        <div class="itinerary-list" id="itineraryList"></div>
+        <form class="add-activity" id="activityForm">
+          <input id="activityInput" placeholder="Add your own activity..." aria-label="New activity" required />
+          <button type="submit">+ Add activity</button>
+        </form>
+        <p class="disclaimer">This is a sample itinerary to inspire your planning. Check local opening hours, transport and reservations before you go.</p>
+      </div>
+    </section>
+
+    <section class="inspiration-section" id="inspiration">
+      <div class="section-heading inspiration-heading">
+        <div><p class="eyebrow dark-eyebrow">A LITTLE TRAVEL INSPIRATION</p><h2>Places that stay <em>with you.</em></h2></div>
+        <p>Pick a mood. Find a place.<br>Let the stories begin.</p>
+      </div>
+      <div class="destination-grid">
+        <button class="destination-card bali" data-destination="Bali, Indonesia"><span class="card-tag">ISLAND ESCAPE</span><span class="card-bottom"><strong>Bali</strong><small>Indonesia · Beaches & beyond</small></span><span class="card-arrow">↗</span></button>
+        <button class="destination-card kyoto" data-destination="Kyoto, Japan"><span class="card-tag">SLOW & SOULFUL</span><span class="card-bottom"><strong>Kyoto</strong><small>Japan · Culture & calm</small></span><span class="card-arrow">↗</span></button>
+        <button class="destination-card swiss" data-destination="Swiss Alps, Switzerland"><span class="card-tag">WILD & FREE</span><span class="card-bottom"><strong>Swiss Alps</strong><small>Switzerland · Mountain air</small></span><span class="card-arrow">↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">✳</span> roamly<span class="brand-dot">.</span></a><p>Go a little farther. Feel a little more.</p><span>© 2026 Roamly Travel</span></footer>
+  <script src="index.js"></script>
+</body>
+</html>
